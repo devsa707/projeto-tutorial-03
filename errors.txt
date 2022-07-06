@@ -1,0 +1,11 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/scripts/core/classes.rpy", line 9: invalid syntax
+    define BGstr_chap():
+                     ^
+    
+
+Ren'Py Version: Ren'Py 7.4.11.2266
+Mon Jul  4 22:56:20 2022
