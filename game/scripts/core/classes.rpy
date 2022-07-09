@@ -21,24 +21,17 @@ init python:
             return outputStr
         return "Backgrounds/background.jpg"
         
-    class CLICKIE(object):
-        def __init__(self, name, fileName, location, clickType, isActive, tip):
-            self.name = name
-            self.fileName = fileName
-            self.location = location
-            self.clickType = clickType
-            self.isActive = isActive
-            self.tip = tip
-        
-        @property
-        def clickable(self):
-            avtr = "Clickables/{}/{}.png".format(location,self.fileName)
-            return avtr
-        
-        @property
-        def effect(self):
-            effectToPlay = "audio/effects/{}.mp3".format(self.fileName)
-            if renpy.loadable(effectToPlay):
-                return effectToPlay
-            else:
-                return "audio/effects/click_01.mp3"
+    def Unlock(place):
+        global locations
+        for q in locations:
+            if q.name == place:
+                if q.unlocked = True
+
+    def Next():
+        global sequence
+        sequence += 1
+
+    def GoTo(self,num):
+        global locations
+        self.location = locations[num].name
+        renpy.retain_after_load()
