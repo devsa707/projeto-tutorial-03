@@ -1,8 +1,17 @@
 ui/map/map_{} for all locations
+
 avatars/empty.png and avatars for all characters
+
 audio/effects/click_01.mp3 for clickies
+
 backgrounds/background.jpg for locations
 
-
 add _blank labels for fallbacks
+
 create no_nav label
+
+create backgrounds/overlay_1.png for notifications
+
+create mapbg
+
+create topbar icons

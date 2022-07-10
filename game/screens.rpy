@@ -97,7 +97,8 @@ style frame:
 
 screen say(who, what):
     style_prefix "say"
-
+    if Notification:
+        use mainUI
     window:
         id "window"
 
@@ -1008,3 +1009,5 @@ style nvl_button:
 style nvl_button_text:
     properties gui.button_text_properties("nvl_button")
 
+screen quick_menu():
+    pass

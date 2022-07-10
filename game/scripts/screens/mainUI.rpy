@@ -1,6 +1,12 @@
 screen mainUI():
     use BG_Image
     use buttonScreen
+    use character_screen
+    use top_bar_screen
+    if nav_menu:
+        use nav_screen
     use TooTipScreen
     if tip_screen:        
         use tipScreen(tip_text)
+    if notification:
+        add "Backgrounds/overlay_1.png"
