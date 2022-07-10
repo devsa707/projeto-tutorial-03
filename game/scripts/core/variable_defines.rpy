@@ -12,7 +12,7 @@ default nav_menu = False
 define slowDissolve = Dissolve(5.0)
 
 default tip_screen = False
-default tip_text = "This is the tip screen. Tanks..." 
+default tip_text = "This is the tip screen.\nThanks..." 
 
 default StartEvents = ""
 
@@ -28,11 +28,10 @@ label Init_Variables:
 
     $ NPCS.append(NPC("laura","Laura","kitchen",True))
 
-    $ location.append(Place("kitchen","Kitchen", True,True))
-    $ location.append(Place("living_room","Living Room", True,True))
-    $ location.append(Place("bedroom","Bedroom", True,True))
-    $ location.append(Place("pool","Pool", True,True))
-    $ location.append(Place("bathroom","Bathroom", True,True))
+    $ locations.append(Place("kitchen","Kitchen", True,True))
+    $ locations.append(Place("bus","Bus Stop", True,True))
+    $ locations.append(Place("garden","Garden", True,True))
+    $ locations.append(Place("hotel","Hotel", True,True))
 
     $ CLICKIES.append(CLICKIE("living_room_sofa","living_room_sofa","living_room","item", True, "Um Sofá Confortável")) #0
     return

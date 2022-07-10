@@ -25,7 +25,7 @@ init python:
         global locations
         for q in locations:
             if q.name == place:
-                if q.unlocked = True
+                q.unlocked = True
 
     def Next():
         global sequence

@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/core/classes.rpy", line 9: invalid syntax
-    define BGstr_chap():
-                     ^
-    
+File "game/script.rpy", line 25: reached end of line when expecting ':'.
+    if clickType == "Character"
+                               ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Mon Jul  4 22:56:20 2022
+Sun Jul 10 12:03:30 2022

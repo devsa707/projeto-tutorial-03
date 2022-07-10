@@ -9,5 +9,5 @@ init python:
 
         @property
         def mapIcon(self):
-            ReturnValue = "ui/map/map_{}".format(self.name)
+            ReturnValue = "ui/map/map_{}.png".format(self.name)
             return ReturnValue

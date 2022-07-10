@@ -14,5 +14,4 @@ screen character_screen():
                     hover anim.Filmstrip(q.avatar,(1920,1080),(4,8),0.08333,32,loop=True)
                     focus_mask True
                     action SetVariable("clickType","Character"), Return(q.name)
-                    focus_mask True
                     hovered tt.Action(q.niceName)

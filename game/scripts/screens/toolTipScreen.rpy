@@ -1,4 +1,4 @@
-screen TooTipScreen():
+screen ToolTipScreen():
     if tt.value <> "":
         frame:
             xalign 0.5

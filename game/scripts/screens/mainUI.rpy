@@ -5,7 +5,7 @@ screen mainUI():
     use top_bar_screen
     if nav_menu:
         use nav_screen
-    use TooTipScreen
+    use ToolTipScreen
     if tip_screen:        
         use tipScreen(tip_text)
     if notification:

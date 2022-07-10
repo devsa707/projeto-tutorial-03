@@ -4,26 +4,26 @@ screen top_bar_screen():
     imagebutton:
         xpos 1860
         ypos 0
-        idle "ui/icon-help.png"
-        hover "ui/icon-help.png"
-        action SetVariable("clickType","Help"), ToggleVariable("tip-screen"), Return ("Help")
+        idle "ui/icons/help.png"
+        hover "ui/icons/help.png"
+        action SetVariable("clickType","Help"), ToggleVariable("tip_screen"), Return ("Help")
         focus_mask True
         hovered tt.Action("Show / Hide hint")
     
     imagebutton:
         xpos 1810
         ypos 0
-        idle "ui/icon-map.png"
-        hover "ui/icon-map.png"
+        idle "ui/icons/map.png"
+        hover "ui/icons/map.png"
         action ToggleVariable("nav_menu"), Return("Nav")
         focus_mask True
         hovered tt.Action("toggle the Map")
 
-    if location <> oldlocation:
+    if location <> oldLocation:
         imagebutton:
             xpos 1760
             ypos 0
-            idle "ui/back.png"
-            hover "ui/back.png"
-            action SetVariable("clickType","Nav"), Return(oldlocation)
+            idle "ui/icons/back.png"
+            hover "ui/icons/back.png"
+            action SetVariable("clickType","Nav"), Return(oldLocation)
             hovered tt.Action ("Go back to previous location")
