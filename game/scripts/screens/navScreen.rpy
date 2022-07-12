@@ -12,5 +12,5 @@ screen nav_screen():
                     idle q.mapIcon
                     hover q.mapIcon
                     focus_mask True
-                    action SetVariable("clickType","Nav"), ToggleVariable("nav_menu"), Return(q.name)
+                    action SetVariable("clickType","nav"), ToggleVariable("nav_menu"), Return(q.name)
                     hovered tt.Action("Go to {}".format(q.niceName))

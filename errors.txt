@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 25: reached end of line when expecting ':'.
-    if clickType == "Character"
-                               ^
+File "game/scripts/core/characters.rpy", line 1: invalid syntax
+    Character("Raven",color "#c4b033", image = "raven")
+                                     ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Sun Jul 10 12:03:30 2022
+Tue Jul 12 20:40:52 2022

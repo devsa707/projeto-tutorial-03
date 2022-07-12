@@ -22,7 +22,7 @@
         
         if not AutoEventHappen:
             $ UIreturn = renpy.call_screen("mainUI")
-            if clickType == "Character":
+            if clickType == "character":
                 $ LabelToCall = "{}_{}_{}".format(UIreturn,str(chapter), str(sequence))
                 $ LabelToCallFallback = "{}_blank".format(UIreturn)
                 if renpy.has_label(LabelToCall):
@@ -38,7 +38,7 @@
             elif renpy.has_label(LabelToCallFallback):
                 call expression LabelToCallFallback                      
 
-        if clickType == "Nav":
+        if clickType == "nav":
             python:
                 for q in locations:
                     if UIreturn == q.name and q.unlocked:

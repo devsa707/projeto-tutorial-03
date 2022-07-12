@@ -5,7 +5,7 @@ screen character_screen():
                 imagebutton:
                     idle q.avatar
                     hover q.avatar
-                    action SetVariable("clickType","Character"), Return(q.name)
+                    action SetVariable("clickType","character"), Return(q.name)
                     focus_mask True
                     hovered tt.Action(q.niceName)
             else:
@@ -13,5 +13,5 @@ screen character_screen():
                     idle anim.Filmstrip(q.avatar,(1920,1080),(4,8),0.08333,32,loop=True)
                     hover anim.Filmstrip(q.avatar,(1920,1080),(4,8),0.08333,32,loop=True)
                     focus_mask True
-                    action SetVariable("clickType","Character"), Return(q.name)
+                    action SetVariable("clickType","character"), Return(q.name)
                     hovered tt.Action(q.niceName)
