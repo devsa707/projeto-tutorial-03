@@ -11,14 +11,14 @@ init python:
         
         @property
         def clickable(self):
-            avtr = "Clickables/{}/{}.png".format(location,self.fileName)
+            avtr = "clickables/{}/{}.png".format(location,self.fileName)
             return avtr
         
         @property
         def effect(self):
-            effectToPlay = "audio/effects/{}.mp3".format(self.fileName)
+            effectToPlay = "audio/effects/{}.wav".format(self.fileName)
             if renpy.loadable(effectToPlay):
                 return effectToPlay
             else:
-                return "audio/effects/click_01.mp3"
+                return "audio/effects/click_01.wav"
     

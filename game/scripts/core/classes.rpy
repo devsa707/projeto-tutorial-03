@@ -10,16 +10,16 @@ init python:
         global location
         global chapter
         global sequence
-        outputStr = "Backgrounds/{}_{}_{}.jpg".format(location,chapter,sequence)
+        outputStr = "backgrounds/{}_{}_{}.jpg".format(location,chapter,sequence)
         if renpy.loadable(outputStr):
             return outputStr
-        outputStr = "Backgrounds/{}_{}.jpg".format(location,chapter)
+        outputStr = "backgrounds/{}_{}.jpg".format(location,chapter)
         if renpy.loadable(outputStr):
             return outputStr
-        outputStr = "Backgrounds/{}.jpg".format(location)
+        outputStr = "backgrounds/{}.jpg".format(location)
         if renpy.loadable(outputStr):
             return outputStr
-        return "Backgrounds/background.jpg"
+        return "backgrounds/background.jpg"
         
     def Unlock(place):
         global locations

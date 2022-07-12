@@ -30,7 +30,7 @@
                 elif renpy.has_label(LabelToCallFallback):
                     call expression LabelToCallFallback                      
 
-        if clickType == "Item":
+        if clickType == "item":
             $ LabelToCall = "{}_{}_{}".format(UIreturn,str(chapter), str(sequence))
             $ LabelToCallFallback = "{}_blank".format(UIreturn)
             if renpy.has_label(LabelToCall):

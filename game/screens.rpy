@@ -97,7 +97,7 @@ style frame:
 
 screen say(who, what):
     style_prefix "say"
-    if Notification:
+    if notification:
         use mainUI
     window:
         id "window"

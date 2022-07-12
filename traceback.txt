@@ -1,15 +1,27 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <'Image' u'avatars/empty.png'>:
+While running game code:
+  File "game/script.rpy", line 24, in script
+    $ UIreturn = renpy.call_screen("mainUI")
   File "game/script.rpy", line 24, in script
     $ UIreturn = renpy.call_screen("mainUI")
   File "game/script.rpy", line 24, in <module>
     $ UIreturn = renpy.call_screen("mainUI")
-IOError: Couldn't find file 'avatars/empty.png'.
+IOError: Couldn't find file 'audio/effects/click_01.mp3'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+  File "renpy/bootstrap.py", line 331, in bootstrap
+    renpy.main.main()
+  File "renpy/main.py", line 662, in main
+    run(restart)
+  File "renpy/main.py", line 148, in run
+    renpy.execution.run_context(True)
+  File "renpy/execution.py", line 922, in run_context
+    context.run()
+  File "game/script.rpy", line 24, in script
+    $ UIreturn = renpy.call_screen("mainUI")
   File "game/script.rpy", line 24, in script
     $ UIreturn = renpy.call_screen("mainUI")
   File "renpy/ast.py", line 928, in execute
@@ -24,47 +36,25 @@ Full traceback:
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "renpy/display/core.py", line 3325, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "renpy/display/core.py", line 3839, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "renpy/display/core.py", line 2565, in draw_screen
-    renpy.config.screen_height,
-  File "render.pyx", line 492, in renpy.display.render.render_screen
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 826, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 826, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 826, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/screen.py", line 688, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/layout.py", line 826, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/behavior.py", line 795, in render
-    rv = super(Button, self).render(width, height, st, at)
-  File "renpy/display/layout.py", line 1264, in render
-    st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "renpy/display/im.py", line 625, in render
-    return cache.get(self, render=True)
-  File "renpy/display/im.py", line 287, in get
-    surf = image.load()
-  File "renpy/display/im.py", line 706, in load
-    raise e
-IOError: Couldn't find file 'avatars/empty.png'.
+  File "renpy/display/core.py", line 3773, in interact_core
+    renpy.audio.audio.interact()
+  File "renpy/audio/audio.py", line 1209, in interact
+    periodic()
+  File "renpy/audio/audio.py", line 1162, in periodic
+    raise_(exc[0], exc[1], exc[2])
+  File "renpy/audio/audio.py", line 1140, in periodic_thread_main
+    periodic_pass()
+  File "renpy/audio/audio.py", line 1082, in periodic_pass
+    c.periodic()
+  File "renpy/audio/audio.py", line 518, in periodic
+    topf = load(filename)
+  File "renpy/audio/audio.py", line 69, in load
+    rv = renpy.loader.load(fn)
+  File "renpy/loader.py", line 798, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'audio/effects/click_01.mp3'.
 
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
 projeto tutorial 03 1.0
-Sun Jul 10 12:28:30 2022
+Tue Jul 12 20:04:09 2022

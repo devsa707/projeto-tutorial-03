@@ -33,5 +33,5 @@ label Init_Variables:
     $ locations.append(Place("garden","Garden", True,True))
     $ locations.append(Place("hotel","Hotel", True,True))
 
-    $ CLICKIES.append(CLICKIE("living_room_sofa","living_room_sofa","living_room","item", True, "Um Sofá Confortável")) #0
+    $ CLICKIES.append(CLICKIE("bus_stop_sit","bus_stop_sit","bus","item", True, "Esperar o onibus")) #0
     return
